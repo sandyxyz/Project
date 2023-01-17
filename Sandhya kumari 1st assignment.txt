@@ -1,0 +1,163 @@
+Name: SANDHYA KUMARI
+Reg no. 12019324
+
+Question 1
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    
+    cout<<"enter size of array : ";
+    cin>>n;
+    int arr[n];
+    cout<<"enter element of array : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int max=arr[0];
+    for(int i=0;i<n;i++){
+        if(arr[i]>max){
+         max=arr[i];  
+        }
+    }
+    cout<<"Largest element of array : "<<max;
+
+    return 0;
+}
+
+
+
+
+
+
+
+Question 2
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int size;
+cout<<"enter size of array  : ";
+cin >> size;
+int arr[size];
+cout<<"Enter elements of array : "<<endl;
+for(int i = 0; i < size; i++){
+cin >> arr[i];
+}
+sort(arr, arr+size);
+cout<<"three largest elements are : ";
+for(int i = size-1; i >= size - 3; i--){
+cout<<arr[i]<<" ";
+}
+}
+
+
+
+
+
+
+
+
+
+
+Question 3
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    
+    cout<<"enter size of array : ";
+    cin>>n;
+    int arr[n];
+    cout<<"enter element of array : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int max=arr[0];
+    
+    for(int i=0;i<n;i++){
+        if(arr[i]>max){
+         max=arr[i];  
+        }
+    }
+    int sMax=arr[0];
+    for(int i=0;i<n;i++){
+        if(arr[i]>sMax){
+           if(arr[i] != max){
+               sMax=arr[i];
+   }   
+    }
+    }
+    cout<<"second largest element of array : "<<sMax;
+    return 0;
+}
+
+Q  4 
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int size;
+cout<<"enter size of array  : ";
+cin >> size;
+int arr[size];
+cout<<"Enter elements of array : ";
+for(int i = 0; i < size; i++){
+cin >> arr[i];
+}
+int k;
+cout<<" enter the value of k : ";
+cin>>k;
+sort(arr, arr+size);
+cout<<"k largest elements are : ";
+for(int i = size-1; i >= size - k; i--){
+cout<<arr[i]<<" ";
+}
+}
+
+
+
+
+
+
+Q  5
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"enter size of array : ";
+    cin>>n;
+    int arr[n];
+    cout<<"enter element of array : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int max_times=0;
+    for (int i = 0; i <n; i++)
+    {
+        int count=0;
+        for (int j = 0; j <n; j++)
+        {
+            if (arr[i]==arr[j])
+            {
+                count++;
+            }
+        }
+        if (max_times<count)
+        {
+            max_times=count;
+            cout<<"element having maximum frequency :  "<<arr[i]<<endl;
+            cout<<"frequency : "<<max_times;
+        } 
+    }
+    return 0;
+}

@@ -1,0 +1,296 @@
+Name : Sandhya kumari
+reg no 12019324
+
+Quesion 1
+ Write a C++ Program to find Factorial of a number using class.
+
+#include <iostream>
+
+using namespace std;
+
+class Factorial{
+    public:
+    int num,fac=1;
+    void get_data(){
+        cout<<"enter the number :";
+        cin>>num;
+    }
+    void fun(){
+        if(num==0 || num==1){
+            cout<<"Factorial is "<<1;
+        }
+        else{
+            while(num>0){
+                fac=fac*num;
+                num--;
+            }
+        }
+    }
+    void show_data(){
+        cout<<"Factorial is "<<fac;
+    }
+};
+
+int main()
+{
+    Factorial num;
+    num.get_data();
+    num.fun();
+    num.show_data();
+
+    return 0;
+}
+
+
+________________________________________________________________________________________________________________________________________
+
+
+
+Question 2   Write a C++ program to find Reverse of a Number using class.
+
+#include <iostream>
+
+using namespace std;
+
+class Reverse{
+    public:
+    int num,rev=0;
+    void get_data(){
+        cout<<"enter the number :";
+        cin>>num;
+    }
+    void fun(){
+       while (num != 0)
+       {
+      rev = rev * 10;
+      rev = rev + num % 10;
+      num = num / 10;
+       }
+
+    }
+    void show_data(){
+        cout<<"Reversed number  is "<<rev;
+    }
+};
+
+int main()
+{
+    Reverse num;
+    num.get_data();
+    num.fun();
+    num.show_data();
+
+    return 0;
+}
+
+
+________________________________________________________________________________________________________________________________________
+
+
+
+Question 3:
+
+             #include <iostream>
+
+using namespace std;
+
+class complex{
+    private:
+    int a,b;
+    public:
+    void set_data(int x,int y){
+        a=x;
+        b=y;
+    }
+    
+    void get_data(){
+        cout<<a<<"+i"<<b;
+    }
+};
+
+
+int main()
+{
+    complex ob;
+    ob.set_data(1,4);
+    ob.get_data();
+
+    return 0;
+}
+
+
+
+___________________________________________________________________________________________________________________________________
+
+
+
+Question 4   ..Write a C++ Program to find Largest among 3 numbers using classes
+
+#include <iostream>
+
+using namespace std;
+
+class Number{
+    public:
+    int num1,num2,num3,max;
+    int i;
+    void get_data(){
+        cout<<"num1 : ";
+        cin>>num1;
+        cout<<"num2 : ";
+        cin>>num2;
+        cout<<"num3 : ";
+        cin>>num3;
+    }
+     
+     void fun(){
+         if(num1>num2 && num1>num3){
+             max=num1;
+         }else if(num2>num1 && num2>num3){
+         max=num2;
+     }
+     else{
+         max=num3;
+     }
+}
+    void show_data(){
+        
+        
+        cout<<"Largest number is "<<max<<endl;
+        
+        
+        }
+    
+    
+};
+
+________________________________________________________________________________________________________________________________________
+
+
+Question 5  Write a C++ Program to find Sum of odd numbers between 1 and 100 using class
+  
+
+#include <iostream>
+
+using namespace std;
+
+class Odd_sum{
+    public:
+    int num,sum=0;
+    void get_data(){
+        cout<<"enter the number :";
+        cin>>num;
+    }
+    void fun(){
+       for(int i=0;i<num;i++){
+           if(i%2!=0){
+               sum+=i;
+           }
+       }
+
+    }
+    void show_data(){
+        cout<<"sum of odd number  is "<<sum;
+    }
+};
+
+int main()
+{
+    Odd_sum num;
+    num.get_data();
+    num.fun();
+    num.show_data();
+
+    return 0;
+}
+
+
+_______________________________________________________________________________________________________________________________________
+
+
+Question 6  Write a C++ Program to Print Numbers from 1 to n using class.
+
+#include <iostream>
+
+using namespace std;
+
+class Number{
+    public:
+    int num;
+    int i;
+    void get_data(){
+        cout<<"enter the number :";
+        cin>>num;
+    }
+    
+    void show_data(){
+        for(i=1;i<=num;i++){
+            
+        
+        cout<<" "<<i;
+        }
+    }
+    
+};
+
+int main()
+{
+    Number num;
+    num.get_data();
+
+    num.show_data();
+
+    return 0;
+}
+
+_________________________________________________________________________________________________________________________________________
+
+
+Question 7  Write a C++ program to Swap two numbers using class
+
+
+#include <iostream>
+
+using namespace std;
+
+class Number{
+    public:
+    int num1,num2,temp;
+    int i;
+    void get_data(){
+        cout<<"num1 : ";
+        cin>>num1;
+        cout<<"num2 : ";
+        cin>>num2;
+    }
+     
+     void fun(){
+         temp=num1;
+         num1=num2;
+         num2=temp;
+     }
+    
+    void show_data(){
+        
+        
+        cout<<"swaped number is "<<endl;
+        cout<<"num1 : "<<num1<<endl;
+        
+        cout<<"num2 : "<<num2;
+        
+        }
+    
+    
+};
+
+int main()
+{
+    Number num;
+    num.get_data();
+    num.fun();
+    num.show_data();
+
+    return 0;
+}
+
+  
