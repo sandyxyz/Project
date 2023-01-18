@@ -1,0 +1,222 @@
+Name SANDHYA KUMARI
+Reg no 12019324
+htb id 962403721
+
+_____________________________________________________________________________________________________________________________________-
+
+
+Question 1
+
+Write a program to print the area and perimeter of a triangle having sides of 3, 4 and 5 units by creating a class named 'Triangle' with the constructor having the three sides as its parameters.
+
+
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+
+
+class Triangle{
+   float side1,side2,side3,area,s;
+   public:
+   
+    Triangle(float x,float y,float z){
+        side1=x;
+        side2=y;
+        side3=z;
+        
+    }
+
+    float Area(){
+        s=(side1+side2+side3)/2;
+        area=sqrt(s*(s-side1)*(s-side2)*(s-side3));
+    
+    return area;
+    }
+};
+
+int main()
+{
+    Triangle t(3,4,5);
+    cout<<t.Area();
+
+    return 0;
+}
+
+________________________________________________________________________________________________________________________________________
+
+Question 2
+
+Write a program to print the area of two rectangles having sides (4,5) and (5,8) respectively by creating a class named 'Rectangle' with a function named 'Area' which returns the area. Length and breadth are passed as parameters to its constructor.
+
+
+#include <iostream>
+
+using namespace std;
+
+
+
+class Rectangle{
+   int length,breadth,area;
+   public:
+   
+    Rectangle(int l,int b){
+        length=l;
+        breadth=b;
+        
+    }
+    
+    int Area(){
+        area=length*breadth;
+        
+    
+    return area;
+    }
+};
+
+int main()
+{
+    Rectangle z(4,5),s(5,8);
+    //z.Area();
+    cout<<"Area of rectangle is  "<<z.Area()<<endl;
+    cout<<"Area of rectangle is  "<<s.Area()<<endl;
+
+    return 0;
+}
+
+
+__________________________________________________________________________________________________________________________________________
+
+Question 3
+
+Write a program to print the area of a rectangle by creating a class named 'Area' taking the values of its length and breadth as parameters of its constructor and having a function named 'returnArea' which returns the area of the rectangle. Length and breadth of the rectangle are entered through keyboard.
+
+
+#include <iostream>
+
+using namespace std;
+
+
+
+class Area{
+   int length,breadth,area;
+   public:
+   
+    Area(int l,int b){
+        length=l;
+        breadth=b;
+        
+    }
+    
+    int returnArea(){
+        area=length*breadth;
+        
+    
+    return area;
+    }
+};
+
+int main()
+{
+    int length,breadth;
+    cout<<"enter length of rectangle :";
+    cin>>length;
+    cout<<"enter breadth of rectangle :";
+    cin>>breadth;
+    Area R(length,breadth);
+    cout<<"Area of rectangle is : "<<R.returnArea();
+    return 0;
+}
+
+
+________________________________________________________________________________________________________________________________________
+
+
+Question 4
+
+Print the average of three numbers entered by the user by creating a class named 'Average' having a function to calculate and print the average without creating any object of the Average class.
+
+#include <iostream>
+using namespace std;
+class Average{
+    public:
+     float cal_avg(float first, float second, float third){
+        return (first + second + third) / 3;
+    }
+};
+
+
+int main(){
+    cout<<"Enter three numbers: "<<endl;
+    float first, second, third;
+    cin>>first;
+    cin>>second;
+    cin>>third;
+    cout<<"The average is: "<<Average::cal_avg(first,second,third)<<endl;
+    return 0;
+}
+
+
+________________________________________________________________________________________________________________________________________
+
+Question 5
+
+Print the sum, difference and product of two complex numbers by creating a class named 'Complex' with separate functions for each operation whose real and imaginary parts are entered by the user.
+
+
+#include <iostream>
+
+using namespace std;
+
+class complex{
+
+    int a,b;
+    public:
+    complex(){
+        
+    }
+    complex(int x,int y){
+        a=x;
+        b=y;
+    }
+    
+    void sum(complex o1,complex o2){
+        cout<<"sum of complex number is : "<<o1.a+o2.a<<"+i"<<o1.b+o2.b<<endl;
+    }
+    void difference(complex o1,complex o2){
+        cout<<"difference of complex number is : "<<o1.a-o2.a<<"+i"<<o1.b-o2.b<<endl;
+    }
+    void product(complex o1,complex o2){
+        cout<<"product of complex number is : "<<o1.a*o2.a<<"+i"<<o1.b*o2.b<<endl;
+    }
+    
+    
+};
+
+
+int main()
+{
+    int x,y,z,t;
+    cout<<"enter  1st real part : ";
+    cin>>x;
+    cout<<"enter 1st imaginary part : ";
+    cin>>y;
+    cout<<"enter  2nd real part : ";
+    cin>>z;
+    cout<<"enter 1nd imaginary part : ";
+    cin>>t;
+    complex ob(x,y);
+    complex ob1(z,t);
+    complex s;
+    
+    
+    s.sum(ob,ob1);
+    s.difference(ob,ob1);
+    s.product(ob,ob1);
+    
+    return 0;
+}
+
+
+
