@@ -1,0 +1,85 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n],b[n],c[2*n];
+    
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        cin>>b[i];
+    }
+
+     for (int i = 0; i < n; i++) {
+        c[i] = a[i];
+        c[i + n] = b[i];
+    }
+    
+    for (int i = 0; i < 2 * n; i++) {
+        cout << c[i] << " ";
+    }
+    
+    return 0;
+}
+
+___________________________________________________________________________________________________________________________
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n],sum=0;
+    
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+     for (int i = 0; i < n; i++) {
+        sum+=a[i];
+         cout<<sum<<" ";
+    }
+    
+    return 0;
+}
+
+_____________________________________________________________________________________________________________________________
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main ()
+{
+    
+    string sentences[3],str;
+    int count,i; 
+    cout << "Enter a string : ";
+    for(int i=0;i<3;i++){
+    getline(cin, sentences[i]);
+    }
+    int result=0;
+    for(int j=0;j<3;j++){
+        count=1;
+        str=sentences[j];
+    for (i = 0; str[i] != '\0';i++)
+    {
+        if (str[i] == ' '){
+            count++;    
+        }
+    }
+    
+    if(result<count){
+        result=count;
+    }
+    }
+    cout << "maximum number of words in a sentence: " <<result<<endl;
+    return 0;
+}
